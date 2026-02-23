@@ -3,8 +3,12 @@ from fastapi.responses import JSONResponse
 import os
 import openoa
 
+from api import utils, analysis
+
 app = FastAPI(title="OpenOA API")
 
+app.include_router(utils.router)
+app.include_router(analysis.router)
 @app.get("/")
 def read_root():
     return JSONResponse(content={"status": "OpenOA API is running on GCP Cloud Run", "version": openoa.__version__})
