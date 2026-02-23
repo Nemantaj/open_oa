@@ -8,7 +8,7 @@ from typing import Optional, List, Dict, Any
 from .data import datasets_store
 from .jobs import job_store
 
-from openoa.examples import project_ENGIE
+from examples import project_ENGIE
 from openoa.analysis.aep import MonteCarloAEP
 from openoa.analysis.electrical_losses import ElectricalLosses
 from openoa.analysis.turbine_long_term_gross_energy import TurbineLongTermGrossEnergy
