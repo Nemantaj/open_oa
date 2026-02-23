@@ -1,11 +1,10 @@
 from fastapi import APIRouter, HTTPException
 from fastapi.responses import Response
-import matplotlib.pyplot as plt
 import matplotlib
-import io
-
 # Setup matplotlib for non-gui backend so server doesn't crash
 matplotlib.use('Agg')
+import matplotlib.pyplot as plt
+import io
 
 from .data import datasets_store
 from openoa.utils import plot
